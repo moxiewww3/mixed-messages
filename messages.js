@@ -3,9 +3,10 @@
  *  The message will be made up of three different pieces of data,
  *  Date, Time and the message. 
  */
-var messages = ['Strive For Progress Not Perfection', 'A Goal Is A Dream With A Deadline.', 
-'Do Not Dwell In The Past, Do Not Dream Of The Future, Concentrate the Mind On the Present Moment.', 
-'Never Give Up, For That is Just The Place and Time That The Tide Will Turn.'];
+var people = ['Beauty', 'Girl', 'Lady', 'Handsom', 'Young Man', 'Gentleman' ];
+var messages = ['Strive for progress not perfection!', 'A goal is a dream with a deadline.', 
+'Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.', 
+'Never give up, for that is just the place and time that the tide will turn.'];
 
 //careate Date object for ouput today's date 
 var today = new Date();
@@ -18,9 +19,14 @@ var weekday = new Intl.DateTimeFormat('en-US', {weekday: 'long'}).format(today);
 
 //generate random Message
 function generateRandomMessage (messages) {
-    let length = messages.length;
-    let ith = Math.floor(Math.random() * length);
+    let mLength = messages.length;
+    let ith = Math.floor(Math.random() * mLength);
     return messages[ith];    
 }
 
+function generateRandomPeople(people){
+    let pLength = people.length;
+    let jth = Math.floor(Math.random() * pLength);
+    return people[jth];
+}
 console.log(generateRandomMessage(messages));
